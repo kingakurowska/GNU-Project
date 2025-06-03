@@ -20,6 +20,6 @@ $SCHRODINGER/glide $INFILE \
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')]" >> "${LOGFILE}"
 echo "Script: $(basename "$0")" >> "${LOGFILE}"
-echo "Input: ${INPUT_FILE}" >> "${LOGFILE}"
-echo "Output: ${JOBNAME}.zip" >> "${LOGFILE}"
+echo "Input: ${GRID}, ${LIGANDS}" >> "${LOGFILE}"
+echo "Output: ${JOBNAME}.maegz" >> "${LOGFILE}"
 echo "-----------------------------" >> "${LOGFILE}"
