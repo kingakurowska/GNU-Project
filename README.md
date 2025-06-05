@@ -23,7 +23,7 @@ Celem projektu jest zautomatyzowanie pełnego procesu przygotowania struktur bia
 ## Instrukcja
 Każdy skrypt wykonuje pojedynczy etap przygotowania. Skrypty należy wywoływać w podanej kolejności, przekazując wymagane argumenty. Wszystkie operacje są automatycznie logowane w dzienniku laboratoryjnym.
 
-### 1. Przygotowanie białka (Protein PReparation)
+### 1. Przygotowanie białka (Protein Preparation)
 Przygotowuje strukturę białka, ustalając protonację, uzupełniając brakujące fragmenty i poprawiając geometrię.
 ```
 {bash}
