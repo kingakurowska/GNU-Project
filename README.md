@@ -1,6 +1,6 @@
 # Projekt: Automatyzacja procesu dokowania z wykorzystaniem Glide (Schrödinger Suite)
 
-## Temat i celprojektu
+## Temat i cel projektu
 Celem projektu jest zautomatyzowanie pełnego procesu przygotowania struktur białko–ligand do dokowania molekularnego przy użyciu narzędzi z pakietu Schrödinger (takich jak Protein Preparation Wizard, LigPrep, Generate Glide Grids i Glide). Projekt umożliwia standaryzację parametrów i usprawnienie pracy zespołowej, w której wiele osób korzysta z tego samego pipeline’u.
 * Ujednolicenie procesu przygotowania układów do dokowania, niezależnie od użytkownika.
 * Zapewnienie powtarzalności i spójności wyników dzięki stałym parametrom.
