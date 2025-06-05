@@ -7,6 +7,9 @@ JOBNAME=${INFILE/dock.in/docking}
 echo ${INFILE}
 LOGFILE="gnu_project_log.txt"
 
+OUTDIR="docking_results/${JOBNAME}"
+mkdir -p ${OUTDIR}
+
 cat <<EOF > $INFILE
 GRIDFILE $GRID
 LIGANDFILE $LIGANDS
@@ -16,10 +19,16 @@ PRECISION SP            #tryb precyzji dokowania
 EOF
 
 $SCHRODINGER/glide $INFILE \
-	-OVERWRITE -adjust -NJOBS 1 -HOST localhost -JOBNAME $JOBNAME
+        -adjust -NJOBS 1 -HOST localhost -WAIT -JOBNAME $JOBNAME
+
+# Przenoszenie wyników
+mv "${JOBNAME}"* "$OUTDIR"/
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')]" >> "${LOGFILE}"
 echo "Script: $(basename "$0")" >> "${LOGFILE}"
 echo "Input: ${GRID}, ${LIGANDS}" >> "${LOGFILE}"
 echo "Output: ${JOBNAME}.maegz" >> "${LOGFILE}"
 echo "-----------------------------" >> "${LOGFILE}"
+
+echo "Wyniki zostaną zapisane w folderze ${OUTDIR}"
+
